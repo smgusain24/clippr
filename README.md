@@ -6,6 +6,18 @@ A lightweight clipboard manager for macOS that lives in your menu bar. Built wit
 ![Tauri](https://img.shields.io/badge/Tauri_v2-24C8D8?logo=tauri&logoColor=white)
 ![Svelte](https://img.shields.io/badge/Svelte_5-FF3E00?logo=svelte&logoColor=white)
 
+## Install
+
+### Quick install (requires a published release)
+
+```bash
+curl -sL https://raw.githubusercontent.com/smgusain24/clippr/main/install.sh | bash
+```
+
+### Download
+
+Grab the latest `.dmg` from [Releases](https://github.com/smgusain24/clippr/releases).
+
 ## Features
 
 - **Menu bar app** — no dock icon, always accessible
@@ -17,7 +29,19 @@ A lightweight clipboard manager for macOS that lives in your menu bar. Built wit
 - **Global shortcut** — `Cmd+Shift+V` to toggle the window
 - **Dark theme** — warm, minimal UI
 
-## Getting Started
+## Usage
+
+| Action | How |
+|---|---|
+| Open/close | Click tray icon or `Cmd+Shift+V` |
+| Copy a clip | Click on it |
+| Pin/unpin | Right-click → Pin |
+| Categorize | Right-click → Category |
+| Delete | Right-click → Delete |
+| Search | Type in the search bar |
+| Dismiss | `Esc` or click outside |
+
+## Development
 
 ### Prerequisites
 
@@ -25,7 +49,7 @@ A lightweight clipboard manager for macOS that lives in your menu bar. Built wit
 - [Rust](https://rustup.rs/)
 - Xcode Command Line Tools (`xcode-select --install`)
 
-### Install & Run
+### Run locally
 
 ```bash
 npm install
@@ -40,17 +64,14 @@ npm run tauri build
 
 The `.dmg` and `.app` will be in `src-tauri/target/release/bundle/`.
 
-## Usage
+### Release
 
-| Action | How |
-|---|---|
-| Open/close | Click tray icon or `Cmd+Shift+V` |
-| Copy a clip | Click on it |
-| Pin/unpin | Right-click → Pin |
-| Categorize | Right-click → Category |
-| Delete | Right-click → Delete |
-| Search | Type in the search bar |
-| Dismiss | `Esc` or click outside |
+Push a version tag to trigger the GitHub Actions build:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
 
 ## Tech Stack
 
