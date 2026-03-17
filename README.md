@@ -41,44 +41,6 @@ Grab the latest `.dmg` from [Releases](https://github.com/smgusain24/clippr/rele
 | Search | Type in the search bar |
 | Dismiss | `Esc` or click outside |
 
-## Development
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18+)
-- [Rust](https://rustup.rs/)
-- Xcode Command Line Tools (`xcode-select --install`)
-
-### Run locally
-
-```bash
-npm install
-npm run tauri dev
-```
-
-### Build
-
-```bash
-npm run tauri build
-```
-
-The `.dmg` and `.app` will be in `src-tauri/target/release/bundle/`.
-
-### Release
-
-Push a version tag to trigger the GitHub Actions build:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-## Tech Stack
-
-- **Backend**: Rust, Tauri 2, rusqlite, objc2 (native NSPasteboard)
-- **Frontend**: Svelte 5 (runes), Vite 6
-- **Storage**: SQLite (bundled)
-
 ## License
 
 MIT
